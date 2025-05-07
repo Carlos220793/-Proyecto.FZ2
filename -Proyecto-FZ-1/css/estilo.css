@@ -1,0 +1,150 @@
+/* Fondo del body solo en el inicio de sesión */
+body.fondo-inicio-sesion {
+  font-family: Arial, sans-serif;
+  background-image: url('../imagenes/mantenimiento.png..jpg');  /* Ruta correcta a la imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Estilo del contenedor de inicio de sesión */
+.formulario-inicio-sesion {
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)); /* Fondo azul con opacidad */
+}
+
+/* Estilo de los labels dentro del formulario de inicio de sesión */
+.formulario-inicio-sesion label,
+#formulario-recuperar-contraseña label {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Estilo de los campos de entrada (usuario y contraseña) */
+.formulario-inicio-sesion input {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Cambia el estilo de los campos al hacer hover */
+.formulario-inicio-sesion input:focus {
+  outline: none;
+  border-color: #2a5298; /* Azul oscuro */
+  background-color: #fff;
+}
+
+/* Estilo de los botones */
+.formulario-inicio-sesion button {
+  width: 100%;
+  height: 45px;
+  background-color: #2a5298; /* Azul oscuro */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.formulario-inicio-sesion button:hover {
+  background-color: #1e3c72; /* Azul más oscuro */
+}
+
+/* Estilo del enlace de recuperación de contraseña */
+#olvidas-contraseña {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#olvidas-contraseña:hover {
+  color: #2a5298;
+}
+
+#acciones {
+  display: none;
+  margin-top: 20px;
+}
+
+.boton {
+  margin-right: 10px;
+}
+
+#volver-menu {
+  margin-top: 15px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#form-mantenimiento input {
+  margin-right: 10px;
+  flex: 0 0 auto;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#form-mantenimiento button {
+  flex: 0 0 auto;
+  width: 150px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilo para las tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+#form-mantenimiento {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}

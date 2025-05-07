@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio de Sesión - Mantenimientos</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="fondo-inicio-sesion"> <!-- Fondo de inicio de sesión añadido al body -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+  <div class="contenedor">
+    <form id="formulario-inicio-sesion" class="formulario-inicio-sesion">
+      <h2>Inicio de Sesión</h2>
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" name="usuario" required>
+      <label for="contraseña">Contraseña:</label>
+      <input type="password" id="contraseña" name="contraseña" required>
+      <button type="submit">Iniciar Sesión</button>
+      <p><a href="#" id="olvidas-contraseña">¿Olvidaste tu contraseña?</a></p>
+    </form>
+
+    <form id="formulario-recuperar-contraseña" style="display: none;">
+      <h2>Recuperar Contraseña</h2>
+      <label for="email-recuperar">Correo electrónico:</label>
+      <input type="email" id="email-recuperar" name="email-recuperar" required>
+      <button type="submit">Recuperar Contraseña</button>
+    </form>
+  </div>
+
+  <!-- Menu y Formulario de Mantenimiento (Oculto hasta iniciar sesión) -->
+  <div id="acciones" style="display: none;">
+    <button id="agregar-mantenimiento" class="boton">Agregar Mantenimiento</button>
+    <button id="buscar-mantenimiento-btn" class="boton">Buscar Mantenimiento 🔍</button>
+  </div>
+
+  <div id="mantenimientos" style="display: none;">
+    <h2>Registrar Mantenimiento</h2>
+    <form id="form-mantenimiento">
+      <input type="date" id="fecha" required placeholder="Fecha de Mantenimiento">
+      <input type="text" id="estado" required placeholder="Estado del equipo">
+      <input type="text" id="nombre" required placeholder="Nombre del equipo">
+      <input type="text" id="placa" required placeholder="Placa">
+      <input type="text" id="serial" required placeholder="Serial">
+      <input type="text" id="descripcion" required placeholder="Descripción">
+      <input type="text" id="persona" required placeholder="Persona encargada">
+      <input type="text" id="centroCosto" required placeholder="Centro de costo">
+      <input type="text" id="modelo" required placeholder="Modelo del equipo">
+      <input type="text" id="area" required placeholder="Área de ubicación">
+      <input type="text" id="cd" required placeholder="CD">
+      <button type="submit">Guardar</button>
+    </form>
+    <button id="volver-menu">Volver al Menú Principal</button>
+
+    <table id="tabla-mantenimientos">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Estado</th>
+          <th>Nombre</th>
+          <th>Placa</th>
+          <th>Serial</th>
+          <th>Descripción</th>
+          <th>Persona</th>
+          <th>Centro Costo</th>
+          <th>Modelo</th>
+          <th>Área</th>
+          <th>CD</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div id="buscar-mantenimiento" style="display: none;">
+    <h2>Buscar Mantenimiento</h2>
+    <input type="text" id="buscar-input" placeholder="Buscar por Nombre / CD / Fecha">
+    <table id="tabla-busqueda">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Estado</th>
+          <th>Nombre</th>
+          <th>Placa</th>
+          <th>Serial</th>
+          <th>Descripción</th>
+          <th>Persona</th>
+          <th>Centro Costo</th>
+          <th>Modelo</th>
+          <th>Área</th>
+          <th>CD</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="volver-menu-buscar">Volver al Menú Principal</button>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
