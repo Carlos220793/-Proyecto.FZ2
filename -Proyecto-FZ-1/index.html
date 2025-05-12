@@ -5,9 +5,9 @@
   <title>Inicio de Sesión - Mantenimientos</title>
   <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body class="fondo-inicio-sesion"> <!-- Fondo de inicio de sesión añadido al body -->
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
+<body class="fondo-inicio-sesion">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript"> emailjs.init('_VVDwXBttdP04k7Pz'); </script>
 
   <div class="contenedor">
     <form id="formulario-inicio-sesion" class="formulario-inicio-sesion">
@@ -21,14 +21,15 @@
     </form>
 
     <form id="formulario-recuperar-contraseña" style="display: none;">
-      <h2>Recuperar Contraseña</h2>
+      <h2 class="titulo-recuperar">Recuperar Contraseña</h2>
+      <p class="descripcion">Introduce tu correo electrónico para recuperar tu contraseña.</p>
       <label for="email-recuperar">Correo electrónico:</label>
-      <input type="email" id="email-recuperar" name="email-recuperar" required>
+      <input type="email" id="email-recuperar" name="email-recuperar" class="input-campo" required>
       <button type="submit">Recuperar Contraseña</button>
+      <p class="enlace-volver"><a href="#" id="volver-al-login">Volver al inicio de sesión</a></p>
     </form>
   </div>
 
-  <!-- Menu y Formulario de Mantenimiento (Oculto hasta iniciar sesión) -->
   <div id="acciones" style="display: none;">
     <button id="agregar-mantenimiento" class="boton">Agregar Mantenimiento</button>
     <button id="buscar-mantenimiento-btn" class="boton">Buscar Mantenimiento 🔍</button>
@@ -51,7 +52,6 @@
       <button type="submit">Guardar</button>
     </form>
     <button id="volver-menu">Volver al Menú Principal</button>
-
     <table id="tabla-mantenimientos">
       <thead>
         <tr>
